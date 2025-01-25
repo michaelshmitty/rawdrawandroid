@@ -7,10 +7,10 @@ all : makecapk.apk
 
 # WARNING WARNING WARNING!  YOU ABSOLUTELY MUST OVERRIDE THE PROJECT NAME
 # you should also override these parameters, get your own signatre file and make your own manifest.
-APPNAME?=cnfgtest
+APPNAME?=rawdrawandroidtest
 LABEL?=$(APPNAME)
 APKFILE ?= $(APPNAME).apk
-PACKAGENAME?=org.yourorg.$(APPNAME)
+PACKAGENAME?=be.michaelsmith.$(APPNAME)
 RAWDRAWANDROID?=.
 RAWDRAWANDROIDSRCS=$(RAWDRAWANDROID)/android_native_app_glue.c
 SRC?=test.c
@@ -119,7 +119,7 @@ CFLAGS_ARM32:=-mfloat-abi=softfp -m32
 CFLAGS_x86:=-march=i686 -mssse3 -mfpmath=sse -m32
 CFLAGS_x86_64:=-march=x86-64 -msse4.2 -mpopcnt -m64
 STOREPASS?=password
-DNAME:="CN=example.com, OU=ID, O=Example, L=Doe, S=John, C=GB"
+DNAME:="CN=michaelsmith.be, OU=ID, O=MichaelSmith, L=Smith, S=Michael, C=BE"
 KEYSTOREFILE:=my-release-key.keystore
 ALIASNAME?=standkey
 
